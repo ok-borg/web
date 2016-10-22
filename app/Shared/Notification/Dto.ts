@@ -1,0 +1,1 @@
+export enum NotificationType {Default= 1, Info, Warning, Error, Success}

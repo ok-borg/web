@@ -1,0 +1,63 @@
+$modal-header-font-size: rem(20px)
+
+.modal-backdrop
+  +z-index(modal-backdrop)
+
+  top: 0
+  left: 0
+  position: fixed
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, .8)
+  overflow-y: auto
+
+  .modal-container
+    +border-radius($border-radius-large)
+
+    margin: ($quadruple-unit-layout * 1.5) auto
+    width: 100%
+    max-width: rem(650px)
+    background: white
+
+    header,
+    main,
+    footer
+      margin: 0
+      padding: $double-half-unit-layout
+
+    header
+      +clearfix
+
+      position: relative
+      padding-bottom: 0
+      //border-bottom: 1px solid $color-grey-50
+
+      .close,
+      .undo
+        @extend .text-center
+
+        display: block
+        width: $modal-header-font-size
+        height: $modal-header-font-size
+        line-height: $modal-header-font-size
+        color: $color-grey-300
+        float: right
+        cursor: pointer
+        font:
+          size: $modal-header-font-size
+          family: $ff-helvetica
+
+      .heading
+        line-height: 1.2
+        font:
+          size: $modal-header-font-size
+
+    main
+      footer
+        padding: $double-half-unit-layout 0 0
+
+
+    footer
+      +clearfix
+
+      padding-top: 0

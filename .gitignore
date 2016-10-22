@@ -1,0 +1,15 @@
+.DS_Store
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+.*-cache
+*.log
+*.css
+.idea
+
+.env
+
+bower_components
+node_modules
+dist

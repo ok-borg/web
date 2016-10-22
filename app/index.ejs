@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= htmlWebpackPlugin.options.title || 'React Node Webpack Typescript' %></title>
+    <% if (htmlWebpackPlugin.options.baseHref) { %><base href="<%= htmlWebpackPlugin.options.baseHref %>"/><% } %>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+
+<div id="AppContainer"></div>
+
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
+</body>
+</html>

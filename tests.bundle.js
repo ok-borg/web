@@ -1,0 +1,5 @@
+Function.prototype.bind = require('function-bind');
+
+const context = require.context('./app', true, /.+\.spec\.tsx?$/);
+context.keys().forEach(context);
+module.exports = context;

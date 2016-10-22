@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "diagnostics": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "./dist",
+    "preserveConstEnums": true,
+    "pretty": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "es5"
+  },
+  "include": [
+    "./typings/index.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

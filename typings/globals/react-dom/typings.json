@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/ea75b2124839a81ade996a2f55a2906c257938eb/react/react-dom.d.ts",
+    "raw": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#ea75b2124839a81ade996a2f55a2906c257938eb",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/ea75b2124839a81ade996a2f55a2906c257938eb/react/react-dom.d.ts"
+  }
+}

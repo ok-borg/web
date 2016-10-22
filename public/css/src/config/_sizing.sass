@@ -1,0 +1,27 @@
+// This is the px value of the main unit - rem base - on which all sizing and
+// layout depends. Every single rem value is calculated using this value.
+$rem-base: 16px
+
+// This is the basic font-size unit. It has been set to 16px because most
+// browsers set 16px as a default font-size. Dependent on this unit is the
+// horizontal visual grid and all font-sizes and layout units.
+$base-unit-font-size: rem($rem-base)
+
+// This is the basic line-height unit. This setting makes sure that typography
+// is not cluttered.
+$base-unit-line-height: 1.6
+
+// This is the basic layout unit. It is inherited from font-size base unit,
+// as all sizing is relative to it. All modules, i.e. div containers, their
+// proportions, padding, margin, etc. will be dependent on this unit as the aim
+// is to increase consistency throughout the whole visual feel
+$base-unit-layout: rem($rem-base)
+$unit-layout: $base-unit-layout
+
+// These are the different unit proportions derived from the base layout unit.
+$quarter-unit-layout: rem($rem-base / 4)
+$half-unit-layout: rem($rem-base / 2)
+$double-half-unit-layout: rem($rem-base * 1.5)
+$double-unit-layout: rem($rem-base * 2)
+$triple-unit-layout: rem($rem-base * 3)
+$quadruple-unit-layout: rem($rem-base * 4)

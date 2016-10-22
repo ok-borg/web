@@ -1,0 +1,50 @@
+$column-numbers: 12
+$column-width: 100% / $column-numbers
+
+@for $i from 1 through $column-numbers
+  .flex-grid-#{$i}
+    +clearfix
+
+    display: flex
+    flex-wrap: wrap
+
+    > .flex-item
+      float: left
+      width: floor(100% / $i)
+      margin-bottom: $base-unit-layout
+
+      +respond-to-size(800px)
+        width: 100%
+        margin-bottom: $double-unit-layout
+
+        &:last-of-type
+          margin-bottom: 0
+
+// @NOTE this is a very silly hotfix to make all .flex-grid-* classes display: flex
+[class^="flex-grid"]
+  display: flex
+
+.align-right
+  margin-left: auto !important
+
+.align-left
+  margin-right: auto !important
+
+.flex
+  display: flex
+
+  &.column
+    flex-direction: column
+
+  &.row
+    flex-direction: row
+
+  &.center-vertically
+    align-items: center
+
+  &.center-horizontally
+    justify-content: center
+
+@for $i from 1 through $column-numbers
+  .flex-#{$i}
+    flex: $i

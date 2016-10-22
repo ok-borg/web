@@ -1,0 +1,61 @@
+.selection
+  +clearfix
+
+  list-style: none
+  margin: 0
+  padding: 0
+  display: block
+
+  $tab-height: rem(66px)
+
+  > li
+    @extend .center-align
+
+    display: block
+    float: left
+
+    &:first-of-type
+      a
+        margin-left: 0
+
+    &:last-of-type
+      a
+        margin-right: 0
+
+    &.selected
+      a
+        border-color: $link-color
+        background: $link-color
+        color: white
+
+        +hover
+          color: white
+
+    a
+      +border-radius($border-radius-large)
+
+      cursor: pointer
+      margin: 0 $base-unit-layout
+      display: block
+      border: 2px solid $color-grey-50
+      height: $tab-height
+      line-height: $tab-height - rem(2px)
+      color: $color-grey-300
+
+      +hover
+        border-color: $link-color
+        color: $link-color
+
+  &.options-2
+    > li
+      width: 50%
+
+      @media #{$small-and-down}
+        width: 100%
+        margin: 0 0 $half-unit-layout
+
+        a
+          margin: 0
+
+        &:last-of-type
+          margin-bottom: 0

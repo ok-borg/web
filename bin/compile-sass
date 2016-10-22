@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+./node_modules/node-sass/bin/node-sass -i --output-style nested --include-path public/css/src public/css/src/app.sass -o public/css
+echo "=== Sass Compiled ==="

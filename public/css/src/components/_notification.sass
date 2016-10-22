@@ -1,0 +1,74 @@
+#notification
+  $notification-height: rem(78px)
+  $notification-default-color: $link-color
+
+  +transition(top .25s)
+  +z-index(notification)
+  @extend .text-center
+
+  cursor: pointer
+  height: $notification-height
+  background: $notification-default-color
+  color: white
+  padding: 0 $base-unit-layout
+  position: fixed
+  width: 100%
+  top: -($notification-height)
+  left: 0
+  font:
+    family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    size: rem(16px)
+    weight: 500
+
+  &.active
+    top: 0
+
+  &:hover
+    small
+      opacity: 1
+
+  &.success, &.success small
+    background: $success-color
+
+  &.warning, &.warning small
+    background: color("amber", "base")
+
+  &.error, &.error small
+    background: $error-color
+
+  .close
+    @extend .text-center
+
+    width: $quadruple-unit-layout / 1.5
+    height: $notification-height
+    line-height: $notification-height
+    position: absolute
+    top: 0
+    right: 0
+    font:
+      size: rem(22px)
+      weight: 700
+
+  small
+    +transition(opacity .25s)
+
+    height: $notification-height
+    line-height: $notification-height
+    background: $notification-default-color
+    display: block
+    position: absolute
+    width: 100%
+    left: 0
+    top: 0
+    opacity: 0
+    font:
+      size: rem(14px)
+
+  p
+    +ellipsis
+    +text-shadow(0px 0px 2px rgba(0,0,0,.25))
+
+    margin: 0
+    display: block
+    height: $notification-height
+    line-height: $notification-height

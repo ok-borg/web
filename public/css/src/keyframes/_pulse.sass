@@ -1,0 +1,21 @@
+@keyframes pulse
+  0%
+    transform: scale3d(1, 1, 1)
+  50%
+    transform: scale3d(1.2, 1.2, 1.2)
+  100%
+    transform: scale3d(1, 1, 1)
+
+@keyframes pulse-small
+  0%
+    transform: scale3d(1, 1, 1)
+  50%
+    transform: scale3d(1.025, 1.025, 1.025)
+  100%
+    transform: scale3d(1, 1, 1)
+
+.pulse
+  +animation(pulse 1s)
+
+.pulsing
+  +animation(pulse 1s linear infinite)

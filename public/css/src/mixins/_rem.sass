@@ -1,0 +1,5 @@
+@function rem($val)
+  $val: unitless($val)
+  $base: unitless($rem-base)
+
+  @return $val / $base * 1rem
