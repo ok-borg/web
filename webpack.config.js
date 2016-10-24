@@ -22,7 +22,7 @@ module.exports = {
             inject: false,
             template: 'app/index.ejs',
             filename: 'index.html',
-            title: 'React Node Webpack Typescript',
+            title: 'OK borg - the quickest solution to your bash woes',
             files: {
                 js: ['assets/head_bundle.js', 'assets/main_bundle.js'],
                 chunks: {
