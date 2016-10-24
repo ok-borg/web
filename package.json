@@ -1,5 +1,5 @@
 {
-  "name": "react-node-webpack-ts",
+  "name": "borg-webapp",
   "version": "1.0.0",
   "description": "Yet another boilerplate?",
   "main": "server.js",
@@ -8,24 +8,27 @@
     "clean:css": "./bin/clean-css",
     "compile:sass": "./bin/compile-sass",
     "watch:sass": "./bin/watch-sass",
-    "start": "./bin/run-src"
+    "start": "./bin/run-src",
+    "generate": "plop --plopfile ./generators/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/slavomirvojacek/react-node-webpack-ts.git"
+    "url": "git+ssh://git@github.com:ok-borg/web.git"
   },
   "keywords": [
     "react",
     "node",
     "webpack",
-    "typescript"
+    "typescript",
+    "borg",
+    "ok-borg"
   ],
-  "author": "Slavomir Vojacek <slavomirvojacek@gmail.com>",
-  "license": "ISC",
+  "author": "Anas Ait-Ali <contact@aitali.co>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/slavomirvojacek/react-node-webpack-ts/issues"
+    "url": "https://github.com/ok-borg/web/issues"
   },
-  "homepage": "https://github.com/slavomirvojacek/react-node-webpack-ts#readme",
+  "homepage": "https://github.com/ok-borg/web#readme",
   "dependencies": {
     "body-parser": "1.15.2",
     "clean-css": "3.4.20",
@@ -67,6 +70,7 @@
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "1.8.0",
     "nodemon": "1.10.0",
-    "phantomjs-prebuilt": "2.1.13"
+    "phantomjs-prebuilt": "2.1.13",
+    "plop": "^1.5.0"
   }
 }

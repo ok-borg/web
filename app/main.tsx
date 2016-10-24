@@ -7,7 +7,7 @@ import {store, history} from './configureStoreAndHistory'
 
 import {NoMatch} from './Shared/NoMatch/Component'
 import Notification from './Shared/Notification/Component'
-import {Welcome} from './Welcome/Component'
+import Homepage from './Homepage/Component'
 
 const renderTo = document.getElementById('AppContainer') as Element;
 
@@ -17,7 +17,7 @@ ReactDOM.render(
             <Notification/>
 
             <Router history={history}>
-                <Route path="/" component={Welcome}/>
+                <Route path="/" component={Homepage}/>
 
                 <Route path="*" component={NoMatch}/>
             </Router>

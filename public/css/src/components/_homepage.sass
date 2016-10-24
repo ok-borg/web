@@ -1,0 +1,35 @@
+$mascot-height: 14em
+
+#homepage
+  main
+    div.row:first-child
+      margin-top: 90px
+    img.mascot
+      height: $mascot-height
+    #search-form
+      margin-top: -20px
+      form
+        div
+          width: 600px
+          margin: auto
+          text-align: center
+        div.search-input-wrapper
+          background-color: $input-background
+          padding: 5px 9px 5px 16px
+          margin-bottom: 15px
+          border: 1px solid $secondary-color
+          box-shadow: 0 2px 2px 0 rgba(79, 195, 247, 0.16), 0 0 0 1px rgba(79, 195, 247, 0.08)
+          input[type="search"]
+            border-bottom: none
+            margin: 0
+            font-size: 1.3em
+            box-shadow: none
+        button[type="submit"]
+          background-color: $secondary-color
+          border: none
+          display: inline-block
+          padding: 0 2rem
+          height: 40px
+          line-height: 40px
+          border-radius: 2px
+          color: white

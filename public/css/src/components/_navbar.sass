@@ -1,0 +1,16 @@
+#navbar
+  nav
+    ul
+      li
+        a
+          display: table-cell
+          &:hover
+            background-color: transparent
+      li > a, a > img
+        vertical-align: middle
+        height: $navbar-height-mobile - ($navbar-height-mobile/4)
+        @media #{$medium-and-up}
+          height: $navbar-height - ($navbar-height/4)
+
+        img
+          @extend .z-depth-1
