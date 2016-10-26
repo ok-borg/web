@@ -4,7 +4,9 @@ const
     path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
-    WebpackNotifierPlugin = require('webpack-notifier');
+    WebpackNotifierPlugin = require('webpack-notifier'),
+    FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+
 
 module.exports = {
     devtool: 'eval-source-map',
@@ -18,6 +20,11 @@ module.exports = {
         publicPath: '/'
     },
     plugins: [
+        new FaviconsWebpackPlugin({
+            prefix: 'public/images/favicons/icons-[hash]/',
+            logo: './public/images/borg_mascot.png',
+            persistentCache: true
+        }),
         new HtmlWebpackPlugin({
             inject: false,
             template: 'app/index.ejs',

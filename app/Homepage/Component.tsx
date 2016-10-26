@@ -1,6 +1,7 @@
 import * as React from 'react'
 import {connect} from "react-redux";
 import {Navbar} from '../Shared/Navbar/Component';
+import {Logo} from '../Shared/Logo/Component';
 
 interface IProps {
 }
@@ -26,7 +27,7 @@ class Homepage extends React.Component<IProps, {}> {
                 <main className="container">
                     <div className="row">
                         <div className="center-align">
-                            <img className="mascot" src="images/borg_mascot.png" alt=""/>
+                            <Logo/>
                         </div>
                     </div>
                     <div id="search-form" className="row">
