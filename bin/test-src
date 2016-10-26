@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 ./node_modules/karma/bin/karma start
-echo "=== Tests have run ==="
+
+echo "=== Tests have run successfully ==="

@@ -5,6 +5,7 @@
     "immutable": "registry:dt/immutable#3.8.1+20160608070634",
     "jasmine": "registry:dt/jasmine#2.5.0+20161003201800",
     "lodash": "github:DefinitelyTyped/DefinitelyTyped/lodash/lodash.d.ts#bc38caf4c4781b8a9b13785a0529fcd47fd1bfb4",
+    "node": "registry:dt/node#6.0.0+20161019125345",
     "react": "registry:dt/react#0.14.0+20161008064207",
     "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#ea75b2124839a81ade996a2f55a2906c257938eb",
     "react-redux": "registry:dt/react-redux#4.4.0+20160908183346",

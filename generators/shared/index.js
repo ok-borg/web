@@ -3,7 +3,7 @@
  */
 
 const fs = require('fs');
-const componentsDir = fs.readdirSync('app/Shared');
+const componentsDir = fs.readdirSync('src/Shared');
 
 module.exports = {
     description: 'Add a new shared component',
@@ -28,7 +28,7 @@ module.exports = {
     actions: [
         {
             type: 'add',
-            path: '../app/Shared/{{properCase name}}/Component.tsx',
+            path: '../src/Shared/{{properCase name}}/Component.tsx',
             templateFile: './component/index.tsx.hbs'
         }
     ]

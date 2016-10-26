@@ -1,3 +1,8 @@
+require('dotenv').config({
+    silent: false,
+    path: '.env.production'
+});
+
 'use strict';
 
 const
@@ -8,18 +13,17 @@ const
 
 module.exports = {
     entry: [
-        path.join(__dirname, 'app', 'main.tsx')
+        path.join(__dirname, 'src', 'main.tsx')
     ],
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[name]-[hash].min.js',
-        publicPath: '/'
+        filename: '[name]-[hash].min.js'
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
         new HtmlWebpackPlugin({
             inject: false,
-            template: 'app/index.prod.ejs',
+            template: 'src/index.production.ejs',
             filename: 'index.html',
             title: 'OK borg - the quickest solution to your bash woes',
             files: {

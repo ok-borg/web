@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+npm run compile:sass
+npm run clean:css
+
+# more info at https://webpack.github.io/docs/webpack-dev-server.html
+./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --history-api-fallback --client-log-level

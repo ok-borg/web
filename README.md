@@ -6,8 +6,23 @@ ___
 
 ## To Install
 
-    # git clone $THIS_REPO
-    npm install
+Please make sure you have the **yarn package manager**.
+
+    npm install yarn -g
+
+Then:
+
+    git clone git@github.com:slavomirvojacek/react-redux-typescript.git
+    yarn install
+    
+    # Hack to resolve all react-router dependencies
+    cd node_modules/react-router && npm install && cd ../..
+    
+    # Set up .env files properly
+    cp .env.example .env
+    cp .env .env.production
+    
+Update `.env.production` so the value of **NODE_ENV** is `production`
     
 ## To Run
 

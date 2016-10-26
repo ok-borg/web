@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# more info at https://www.npmjs.com/package/http-server
+./node_modules/http-server/bin/http-server dist

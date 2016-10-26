@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Clean ./dist
+rm -rf ./dist
+
+# Compiles Sass
+npm run compile:sass
+
+# Minifies and cleans the emitted css
+npm run clean:css
+
+# Compiles React app
+./node_modules/webpack/bin/webpack.js --config ./webpack.production.config.js --profile --colors
+
+# Recursively copies the contents of ./public into ./dist
+cp -r ./public/* ./dist
+
+# Removes Sass source files
+rm -r ./dist/css/src
+
+# Copies favicon to ./dist
+cp ./favicon.ico ./dist
+
+echo "=== App compiled for production environment ==="

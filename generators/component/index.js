@@ -3,7 +3,7 @@
  */
 
 const fs = require('fs');
-const componentsDir = fs.readdirSync('app');
+const componentsDir = fs.readdirSync('src');
 
 module.exports = {
     description: 'Add a new component',
@@ -28,7 +28,7 @@ module.exports = {
     actions: [
         {
             type: 'add',
-            path: '../app/{{properCase name}}/Component.tsx',
+            path: '../src/{{properCase name}}/Component.tsx',
             templateFile: './component/index.tsx.hbs'
         }
     ]
