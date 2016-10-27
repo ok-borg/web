@@ -46,9 +46,8 @@ class Homepage extends React.Component<IProps, IState> {
 
     homepageHtml() {
         return (
-            <div id="homepage">
+            <div>
                 <Navbar/>
-
                 <main className="container">
                     <div className="row">
                         <div className="center-align">
@@ -58,8 +57,12 @@ class Homepage extends React.Component<IProps, IState> {
                     <div id="search-form" className="row">
                         <form>
                             <SearchInput value={this.state.query} onChange={this.handleChange}/>
-                            <div>
-                                <button type="submit" name="action" onClick={this.handleSubmit}>Search</button>
+                            <div className="search-button-wrapper">
+                                <button type="submit"
+                                        name="search"
+                                        className="search-button"
+                                        onClick={this.handleSubmit}>Search
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -70,21 +73,21 @@ class Homepage extends React.Component<IProps, IState> {
 
     searchHtml() {
         return (
-            <div id="search">
-                <Navbar
-                    inputOnChange={this.handleChange}
-                    inputSearchValue={this.state.query}
-                    showSearch={true}
-                />
-            </div>
+            <Navbar
+                inputOnChange={this.handleChange}
+                inputSearchValue={this.state.query}
+                inputOnSearch={this.handleSubmit}
+                showSearch={true}
+            />
         )
     }
 
     render() {
-        if (this.state.firstQuery) {
-            return this.homepageHtml();
-        }
-        return this.searchHtml();
+        return (
+            <div id="homepage">
+                {this.state.firstQuery ? this.homepageHtml() : this.searchHtml()}
+            </div>
+        )
     }
 }
 
