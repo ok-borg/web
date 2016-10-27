@@ -37,7 +37,11 @@ $navbar-element-height-mobile: $navbar-height-mobile - ($navbar-height-mobile/4)
           height: $navbar-element-height - 8px
 
     button[type="submit"].search-button
-      margin-left: -13px
-      line-height: 48px
-      height: 48px
+      margin: 8px 0 0 -13px
       box-shadow: 0 2px 2px 0 rgba(79, 195, 247, 0.16), 0 0 0 1px rgba(79, 195, 247, 0.08)
+      border: 1px solid $secondary-color
+      height: $navbar-element-height-mobile
+      line-height: $navbar-element-height-mobile
+      @media #{$medium-and-up}
+        line-height: $navbar-element-height
+        height: $navbar-element-height
