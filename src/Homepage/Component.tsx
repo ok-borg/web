@@ -30,11 +30,10 @@ class Homepage extends React.Component<IProps, IState> {
     }
 
     handleChange(event: Event) {
-        const
-            target = event.target as HTMLInputElement,
-            value = target.value ? target.value.trim() : '';
+        const target = event.target as HTMLInputElement;
+        
         this.setState({
-            query: value,
+            query: target.value,
             firstQuery: false
         });
     }
