@@ -6,6 +6,8 @@ interface IProps {
 
 export const Logo = (props: IProps) => {
     return (
-        <img className={"mascot "+props.className} src="public/images/borg_mascot.png" alt=""/>
+        <a href="/">
+            <img className={"mascot "+props.className} src="public/images/borg_mascot.png" alt=""/>
+        </a>
     );
 };
