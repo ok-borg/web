@@ -1,5 +1,10 @@
+$navbar-element-height: $navbar-height - ($navbar-height/4)
+$navbar-element-height-mobile: $navbar-height-mobile - ($navbar-height-mobile/4)
+
 #navbar
   nav
+    &.visible-bg
+      background-color: $primary-color
     ul
       li
         a
@@ -8,9 +13,25 @@
             background-color: transparent
       li > a, a > img
         vertical-align: middle
-        height: $navbar-height-mobile - ($navbar-height-mobile/4)
+        height: $navbar-element-height-mobile
         @media #{$medium-and-up}
-          height: $navbar-height - ($navbar-height/4)
+          height: $navbar-element-height
 
         img
           @extend .z-depth-1
+
+    #searchInput div.search-input-wrapper
+      margin: 8px 0 0 0
+      padding: 3px 9px 0
+      height: $navbar-element-height-mobile
+      line-height: $navbar-element-height-mobile
+      @media #{$medium-and-up}
+        line-height: $navbar-element-height
+        height: $navbar-element-height
+
+      input[type="search"]
+        height: $navbar-element-height-mobile - 8px
+        line-height: $navbar-element-height-mobile - 8px
+        @media #{$medium-and-up}
+          line-height: $navbar-element-height - 8px
+          height: $navbar-element-height - 8px
