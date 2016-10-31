@@ -10,13 +10,15 @@ interface IProps {
 }
 
 export const Navbar = (props: IProps) => {
+    const RenderLogo = () => {
+        return props.showSearch ? <Logo className='nav-sive left'/> : '';
+    };
+
     return (
         <div id="navbar" className="navbar-fixed row">
             <nav className={props.showSearch ? 'visible-bg' : ''}>
                 <div className="nav-wrapper">
-                    {props.showSearch &&
-                    <Logo className='nav-sive left'/>
-                    }
+                    {RenderLogo()}
                     {props.showSearch &&
                     <SearchInput
                         value={props.inputSearchValue}

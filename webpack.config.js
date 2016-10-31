@@ -26,11 +26,11 @@ module.exports = {
         publicPath: '/'
     },
     plugins: [
-        new FaviconsWebpackPlugin({
-            prefix: 'public/images/favicons/icons-[hash]/',
-            logo: './public/images/borg_mascot.png',
-            persistentCache: true
-        }),
+        // new FaviconsWebpackPlugin({
+        //     prefix: 'public/images/favicons/icons-[hash]/',
+        //     logo: './public/images/borg_mascot.png',
+        //     persistentCache: true
+        // }),
         new HtmlWebpackPlugin({
             inject: false,
             template: 'src/index.ejs',

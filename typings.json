@@ -1,6 +1,8 @@
 {
   "name": "react-node-webpack-ts",
   "globalDependencies": {
+    "axios": "registry:dt/axios#0.9.1+20161016142654",
+    "es6-promise": "registry:dt/es6-promise#0.0.0+20160614011821",
     "history": "github:DefinitelyTyped/DefinitelyTyped/react-router/history.d.ts#bc38caf4c4781b8a9b13785a0529fcd47fd1bfb4",
     "immutable": "registry:dt/immutable#3.8.1+20160608070634",
     "jasmine": "registry:dt/jasmine#2.5.0+20161003201800",
@@ -13,6 +15,10 @@
     "react-router-redux": "github:DefinitelyTyped/DefinitelyTyped/react-router-redux/react-router-redux.d.ts#bc38caf4c4781b8a9b13785a0529fcd47fd1bfb4",
     "redux": "registry:dt/redux#3.5.2+20160703092728",
     "redux-logger": "github:DefinitelyTyped/DefinitelyTyped/redux-logger/redux-logger.d.ts#bc38caf4c4781b8a9b13785a0529fcd47fd1bfb4",
-    "redux-thunk": "github:DefinitelyTyped/DefinitelyTyped/redux-thunk/redux-thunk.d.ts#bc38caf4c4781b8a9b13785a0529fcd47fd1bfb4"
+    "redux-thunk": "github:DefinitelyTyped/DefinitelyTyped/redux-thunk/redux-thunk.d.ts#bc38caf4c4781b8a9b13785a0529fcd47fd1bfb4",
+    "rx": "registry:dt/rx#0.0.0+20160317120654"
+  },
+  "dependencies": {
+    "ramda": "registry:dt/ramda#0.0.0+20160824142652"
   }
 }

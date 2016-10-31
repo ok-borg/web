@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
-./node_modules/karma/bin/karma start
+if [ "$1" == "watch" ]; then
+    echo '[KARMA START with auto-watch]';
+    ./node_modules/karma/bin/karma start --auto-watch --no-single-run
+else
+    echo '[KARMA START]';
+    ./node_modules/karma/bin/karma start
+    echo "=== Tests have run successfully ==="
+fi
 
-echo "=== Tests have run successfully ==="
+
