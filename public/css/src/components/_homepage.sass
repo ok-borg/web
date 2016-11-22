@@ -1,7 +1,13 @@
 #homepage
   main
-    div.row:first-child
+    &.results
+      background: white
+      margin-top: -20px
+      padding: 0 0 0 75px
+
+    .logo-wrapper
       margin-top: 90px
+
     #search-form
       margin-top: -20px
       form
@@ -12,6 +18,7 @@
           text-align: center
           &.search-button-wrapper
             margin-top: 15px
+
   button[type="submit"].search-button
     background-color: $secondary-color
     border: none
@@ -21,3 +28,4 @@
     line-height: 40px
     border-radius: 2px
     color: white
+

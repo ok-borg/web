@@ -7,7 +7,7 @@ import {store, history} from './configureStoreAndHistory'
 
 import {NoMatch} from './Shared/NoMatch/Component'
 import Notification from './Shared/Notification/Component'
-import Homepage from './Homepage/Component'
+import Homepage from './Components/Homepage/Component'
 
 const renderTo = document.getElementById('AppContainer') as Element;
 

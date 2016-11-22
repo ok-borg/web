@@ -58,7 +58,7 @@ export class BorgApi implements IApi<BorgApiOperation> {
     getSampleData() {
         switch (this.operation) {
             case BorgApiOperation.Search:
-                return require('./stubs/QueryASD.json');
+                return require('./stubs/QueryASD.ts');
             default:
                 return null;
         }

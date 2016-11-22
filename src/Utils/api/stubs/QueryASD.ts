@@ -1,4 +1,4 @@
-[
+export default [
   {
     "Id": "5980857",
     "Title": "sed with special characters",

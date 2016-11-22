@@ -1,20 +1,21 @@
-import {Record, Map} from "immutable";
+import {Record} from "immutable";
 import {IAction, REQUEST_SEARCH_DATA, RECEIVE_SEARCH_DATA} from './Actions';
+import {BorgSearchResponse} from '../../Models/Topic/Main';
 
 const State = Record({
     query: '',
-    data: Map(),
+    data: null,
     isFetching: false
 });
 
 export class SearchState extends State {
     query: string;
-    data: Map<string, any>;
+    data: BorgSearchResponse | null;
     isFetching: boolean;
 }
 
 export default function SearchReducer(state: SearchState | undefined,
-                                      action: IAction<Object | undefined>): SearchState {
+                                      action: IAction<BorgSearchResponse | undefined>): SearchState {
     if (!state) state = new SearchState();
 
     switch (action.type) {
