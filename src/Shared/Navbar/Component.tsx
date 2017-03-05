@@ -33,12 +33,12 @@ export const Navbar = (props: IProps) => {
               className="search-button"
             >Search</button>
             }
+            <ul id="nav-mobile" className="right">
+              <li>
+                <a href="#"><img src="http://materializecss.com/images/yuna.jpg" className="circle"/></a>
+              </li>
+            </ul>
           </form>
-          <ul id="nav-mobile" className="right">
-            <li>
-              <a href="#"><img src="http://materializecss.com/images/yuna.jpg" className="circle"/></a>
-            </li>
-          </ul>
         </div>
       </nav>
     </div>
