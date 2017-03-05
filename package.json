@@ -12,7 +12,9 @@
     "generate": "plop --plopfile ./generators/index.js",
     "serve:dev": "./bin/serve-app-dev",
     "serve:prod": "./bin/serve-app-prod",
-    "start": "./bin/serve-app-dev"
+    "start": "./bin/serve-app-dev",
+    "copy-env": "touch .env && cat .env.example >> .env",
+    "clean": "rm -rf public && rm -rf node_modules"
   },
   "repository": {
     "type": "git",
@@ -38,7 +40,6 @@
     "clean-css": "3.4.20",
     "dotenv": "2.0.0",
     "http-server": "0.9.0",
-    "immutable": "3.8.1",
     "lodash": "4.16.4",
     "ramda": "^0.22.1",
     "react": "15.3.2",

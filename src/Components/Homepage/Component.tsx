@@ -4,7 +4,8 @@ import {Navbar} from '../../Shared/Navbar/Component';
 import {Logo} from '../../Shared/Logo/Component';
 import {SearchInput} from '../../Shared/SearchInput/Component';
 import {searchData} from '../../Shared/SearchInput/Actions';
-import {Topic, Snippet, BorgSearchResponse} from '../../Models/Topic/Main';
+import {Topic, BorgSearchResponse} from '../../Models/Topic/Main';
+import {Result} from '../../Shared/Result/Component';
 
 interface IState {
   query: string
@@ -32,7 +33,7 @@ class Homepage extends React.Component<IProps, IState> {
 
   constructor(props: IProps) {
     super(props);
-    this.state = {query: "", firstQuery: false};
+    this.state = {query: "", firstQuery: true};
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -91,32 +92,13 @@ class Homepage extends React.Component<IProps, IState> {
         <main className="results">
           {
             this.props.borgSearchResponse &&
-            this.props.borgSearchResponse.data
-              .map((obj: Topic, index: any) => {
-                return (
-                  <div key={index} className="row">
-                    <div>
-                      <div>
-                        <h4>
-                          <a href='#'>{obj.title}</a>
-                        </h4>
-                      </div>
-                    </div>
-                    {
-                      obj.snippets
-                        .map((sol: Snippet, i: any) => {
-                          return (
-                            <div key={i}>
-                              <pre>
-                                  {sol.body}
-                              </pre>
-                            </div>
-                          );
-                        })
-                    }
-                  </div>
-                );
-              })
+            (this.props.borgSearchResponse.data.length > 0 ?
+              this.props.borgSearchResponse.data
+                .map((obj: Topic) => {
+                  return (
+                    <Result topic={obj}/>
+                  );
+                }) : <div>Your search returned no matches.</div>)
           }
         </main>
       </div>

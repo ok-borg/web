@@ -19,6 +19,10 @@ Then:
     cd node_modules/react-router && npm install && cd ../..
     
     # Set up .env files properly
+    npm run copy-env
+
+    # For production do:
+
     cp .env.example .env
     cp .env .env.production
     
